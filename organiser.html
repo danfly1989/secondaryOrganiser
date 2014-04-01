@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="">
+		<meta name="author" content="c05356962">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<title>Organiser</title>
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="organiser.css">
+		<script src="organiser.js"></script>
+	</head>
+
+	<body onload="expandTables()">
+		<div>
+			<header>
+				<h1>Organiser</h1>
+			</header>
+
+			<div id="main">
+				<table class = "container">
+					<tr>
+						<td class = "container"><table id="hours"></table></td>
+						<td class = "container"><table id="monday"></table></td>
+						<td class = "container"><table id="tuesday"></table></td>
+						<td class = "container"><table id="wednesday"></table></td>
+						<td class = "container"><table id="thursday"></table></td>
+						<td class = "container"><table id="friday"></table></td>
+						<td class = "container"><table id="saturday"></table></td>
+						<td class = "container"><table id="sunday"></table></td>
+					</tr>
+				</table>
+
+			</div>
+
+			<div id="coverDiv">
+
+				<div id="formDiv" style="">
+					<form id="form" name="form" action="" method="get">
+						<p id = "errorText" class ="error"></p>
+						<p>
+							Appointment details:
+						</p>
+						<textarea id="details" name="details" rows="5" cols="2"></textarea>
+						<p>
+							<!-- Duration: -->
+							<input type="time" id="duration" hidden>
+						<p id = "durationError" class ="error"></p>
+							Start time:
+							<input type="text" id="startTime" readonly>
+							<!-- <input type="time" id="startTime"> -->
+							End time:
+							<input type="time" id="endTime">
+							Select a colour for this appointment:
+							<input type="color" id="colour" value = '#ff0000'>
+							<INPUT type="button" name="submit" Value="Create" onClick="putDataIn(this.form)">
+							<INPUT type="button" name="cancel" Value="Cancel" onClick="closeForm(this.form)">
+						</p>
+					</form>
+
+					<p id = "testOutput"></p>
+
+				</div>
+
+			</div>
+
+			<div id="appointments">
+
+			</div>	
+					<p id = "pageTest"></p>
+
+			<!-- <div id="testH">
+				aaa
+
+			</div>	 -->
+		
+			<nav>
+				<p>
+					<a href="/">Home</a>
+				</p>
+				<p>
+					<a href="/contact">Contact</a>
+				</p>
+			</nav>
+
+			<footer>
+				<p>
+					&copy; Copyright  by Brendan Kehoe
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
